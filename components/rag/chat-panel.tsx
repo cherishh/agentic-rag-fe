@@ -41,7 +41,17 @@ export function ChatPanel({
     <div className='flex flex-col border-r border-gray-200 h-full'>
       {/* 头部配置区域 */}
       <div className='p-4 bg-white border-b border-gray-200'>
-        <h1 className='text-xl font-semibold mb-4 text-gray-800'>RAG Chatbot Demo</h1>
+        <h1 className='text-xl font-semibold mb-4 text-gray-800 flex items-center justify-between'>
+          <span>RAG Chatbot Demo</span>
+          <a
+            className='underline underline-offset-2 text-sm text-gray-500'
+            href='https://github.com/cherishh/agentic-rag-ts'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            对应后端服务
+          </a>
+        </h1>
 
         {/* 服务状态指示器 */}
         <ServiceStatus serviceStatus={serviceStatus} statusLoading={statusLoading} onRefresh={onRefreshStatus} />
