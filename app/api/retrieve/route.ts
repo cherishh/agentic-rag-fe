@@ -2,7 +2,7 @@ export async function POST(request: Request) {
   try {
     const { query, dataset } = await request.json();
 
-    const res = await fetch('http://34.142.222.222:3000/agent', {
+    const res = await fetch('http://34.142.222.222:3000/retrieve', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -15,15 +15,15 @@ export async function POST(request: Request) {
     }
 
     const data = await res.json();
-    console.log('Agent API response:', data);
+    console.log('Retrieve API response:', data);
 
     return Response.json(data);
   } catch (error) {
-    console.error('Agent API error:', error);
+    console.error('Retrieve API error:', error);
     return Response.json(
       {
         success: false,
-        error: 'Failed to fetch data from agent service',
+        error: 'Failed to fetch data from retrieve service',
         message: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 }
