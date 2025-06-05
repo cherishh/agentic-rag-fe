@@ -30,7 +30,7 @@ export function HelpPanel() {
               </div>
               <div className='p-3 bg-green-50 rounded-lg'>
                 <p className='font-medium text-green-800 mb-1'>Agentic RAG</p>
-                <p>智能代理RAG，支持复杂推理和多步骤查询</p>
+                <p>智能代理RAG，支持工具调用和多步骤查询</p>
               </div>
               <div className='p-3 bg-purple-50 rounded-lg'>
                 <p className='font-medium text-purple-800 mb-1'>Cross Query</p>
@@ -99,6 +99,12 @@ export function HelpPanel() {
               <div className='p-3 bg-gray-50 rounded-lg'>
                 <p className='font-medium mb-1'>机器学习相关查询：</p>
                 <p className='text-gray-600'>&ldquo;解释一下卷积神经网络的工作原理&rdquo;</p>
+              </div>
+              <div className='p-3 bg-gray-50 rounded-lg'>
+                <p className='font-medium mb-1'>agentic查询：</p>
+                <p className='text-gray-600'>
+                  &ldquo;最近一个月PPI是多少？另外今天上海的天气如何？再帮我计算 123*456&rdquo;
+                </p>
               </div>
               <div className='p-3 bg-gray-50 rounded-lg'>
                 <p className='font-medium mb-1'>跨数据集查询：</p>
