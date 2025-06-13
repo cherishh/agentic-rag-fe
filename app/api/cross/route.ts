@@ -2,7 +2,7 @@ export async function POST(request: Request) {
   try {
     const { query, datasets } = await request.json();
 
-    const res = await fetch('http://34.142.222.222:3000/cross-query', {
+    const res = await fetch('https://mindful-dream-production.up.railway.app/cross-query', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

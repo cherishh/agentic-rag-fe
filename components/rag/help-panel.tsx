@@ -15,6 +15,7 @@ export function HelpPanel() {
           <HelpCircle className='h-6 w-6' />
         </Button>
       </SheetTrigger>
+      <SheetTitle></SheetTitle>
       <SheetContent className='w-[400px] sm:w-[540px] p-6 overflow-y-auto'>
         <div className='mt-6 space-y-6'>
           {/* 使用说明 */}

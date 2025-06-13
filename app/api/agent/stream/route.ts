@@ -2,7 +2,7 @@ export async function POST(request: Request) {
   const { query, dataset } = await request.json();
 
   try {
-    const res = await fetch('http://34.142.222.222:3000/agent/stream', {
+    const res = await fetch('https://mindful-dream-production.up.railway.app/agent/stream', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
