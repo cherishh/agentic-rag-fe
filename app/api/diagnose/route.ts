@@ -1,7 +1,7 @@
 import { buildApiUrl } from '@/lib/config';
 
 export async function GET() {
-  const status = await fetch(buildApiUrl('/status'), {
+  const status = await fetch(buildApiUrl('/diagnose'), {
     cache: 'no-cache',
   });
   const data = await status.json();

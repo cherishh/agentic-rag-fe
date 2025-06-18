@@ -1,8 +1,10 @@
+import { buildApiUrl } from '@/lib/config';
+
 export async function POST(request: Request) {
   try {
     const { query, datasets } = await request.json();
 
-    const res = await fetch('https://mindful-dream-production.up.railway.app/cross-query', {
+    const res = await fetch(buildApiUrl('/cross-query'), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

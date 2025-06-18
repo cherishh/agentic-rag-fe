@@ -1,8 +1,10 @@
+import { buildApiUrl } from '@/lib/config';
+
 export async function POST(request: Request) {
   try {
     const { query, dataset } = await request.json();
 
-    const res = await fetch('https://mindful-dream-production.up.railway.app/agent', {
+    const res = await fetch(buildApiUrl('/agent'), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

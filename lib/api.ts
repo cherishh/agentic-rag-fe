@@ -104,6 +104,37 @@ export const checkServiceStatus = async () => {
   }
 };
 
+// 深度检测诊断
+export const runDiagnosis = async () => {
+  try {
+    const response = await fetch('/api/diagnose', {
+      method: 'GET',
+      cache: 'no-cache',
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      return { data, error: null };
+    } else {
+      return {
+        data: null,
+        error: {
+          error: `Failed to run diagnosis: ${response.status} ${response.statusText}`,
+          timestamp: new Date().toISOString(),
+        },
+      };
+    }
+  } catch (error) {
+    return {
+      data: null,
+      error: {
+        error: `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        timestamp: new Date().toISOString(),
+      },
+    };
+  }
+};
+
 // 获取当前配置的显示信息
 export const getCurrentConfigInfo = (mode: string, dataset: string): ConfigInfo => {
   if (dataset === 'cross_query') {
