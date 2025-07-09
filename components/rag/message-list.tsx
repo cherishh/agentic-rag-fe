@@ -28,7 +28,9 @@ export function MessageList({ messages, isLoading }: MessageListProps) {
           <Bot className='mx-auto mb-4 h-12 w-12 text-gray-400' />
           <p>开始与RAG助手对话吧！</p>
           <br />
-          <p>点击右小角帮助按钮可以看到价格指数数据的目录</p>
+          <p>
+            点击<span className='font-bold text-red-500'>右下角帮助按钮</span>查看使用说明
+          </p>
         </div>
       )}
 

@@ -22,8 +22,8 @@ export function ConfigPanel({ mode, dataset, configInfo, onModeChange, onDataset
               <SelectValue placeholder='选择模式' />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value='basic_rag'>Basic RAG</SelectItem>
-              <SelectItem value='agentic_rag'>Agentic RAG</SelectItem>
+              <SelectItem value='basic_rag'>Basic RAG - 单纯针对文档做 RAG 检索</SelectItem>
+              <SelectItem value='agentic_rag'>Agentic RAG - 除了文档查询，还支持工具调用(如天气查询)</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -34,9 +34,9 @@ export function ConfigPanel({ mode, dataset, configInfo, onModeChange, onDataset
               <SelectValue placeholder='选择数据集' />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value='price_index_statistics'>Price Index Statistics</SelectItem>
-              <SelectItem value='machine_learning'>Machine Learning</SelectItem>
-              <SelectItem value='cross_query'>Cross Query</SelectItem>
+              <SelectItem value='price_index_statistics'>Price Index Statistics(国家统计局价格指数统计数据)</SelectItem>
+              <SelectItem value='machine_learning'>Machine Learning(机器学习数据，原文档约 39w 字)</SelectItem>
+              <SelectItem value='cross_query'>Cross Query(跨两个数据集查询，同时搜索两个数据集并对比结果)</SelectItem>
             </SelectContent>
           </Select>
         </div>

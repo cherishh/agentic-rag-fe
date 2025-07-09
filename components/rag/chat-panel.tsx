@@ -5,6 +5,7 @@ import { ServiceStatus } from './service-status';
 import { ConfigPanel } from './config-panel';
 import { MessageList } from './message-list';
 import { MessageInput } from './message-input';
+import { ExternalLink } from 'lucide-react';
 
 interface ChatPanelProps {
   messages: Message[];
@@ -44,12 +45,13 @@ export function ChatPanel({
         <h1 className='text-xl font-semibold mb-4 text-gray-800 flex items-center justify-between'>
           <span>RAG Chatbot Demo</span>
           <a
-            className='underline underline-offset-2 text-sm text-gray-500'
+            className='underline underline-offset-2 text-sm text-gray-500 flex items-center gap-1'
             href='https://github.com/cherishh/agentic-rag-ts'
             target='_blank'
             rel='noopener noreferrer'
           >
-            对应后端服务
+            查看对应后端服务
+            <ExternalLink className='w-4 h-4' />
           </a>
         </h1>
 

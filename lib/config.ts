@@ -1,6 +1,6 @@
 const config = {
   api: {
-    baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://mindful-dream-production.up.railway.app',
+    baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://agentic-rag-ts.up.railway.app',
   },
 } as const;
 
