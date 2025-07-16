@@ -57,7 +57,7 @@ export default function Home() {
 
     try {
       // 调用实际API
-      const apiResponse = await callRagApi(currentQuery, mode, dataset);
+      const apiResponse = await callRagApi(currentQuery);
       setRawResponse(apiResponse);
 
       let responseContent = '';
