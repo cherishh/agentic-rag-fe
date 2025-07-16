@@ -4,12 +4,12 @@ export async function POST(request: Request) {
   try {
     const { query, dataset, options } = await request.json();
 
-    const res = await fetch(buildApiUrl('/query'), {
+    const res = await fetch(buildApiUrl('/intelligent-query'), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ query, dataset, options }),
+      body: JSON.stringify({ query, options }),
     });
 
     if (!res.ok) {

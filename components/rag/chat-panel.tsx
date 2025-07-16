@@ -57,15 +57,6 @@ export function ChatPanel({
 
         {/* 服务状态指示器 */}
         <ServiceStatus serviceStatus={serviceStatus} statusLoading={statusLoading} onRefresh={onRefreshStatus} />
-
-        {/* 配置面板 */}
-        <ConfigPanel
-          mode={mode}
-          dataset={dataset}
-          configInfo={configInfo}
-          onModeChange={onModeChange}
-          onDatasetChange={onDatasetChange}
-        />
       </div>
 
       {/* 聊天消息区域 */}

@@ -1,6 +1,6 @@
 const config = {
   api: {
-    baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://agentic-rag-ts.up.railway.app',
+    baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3000',
   },
 } as const;
 

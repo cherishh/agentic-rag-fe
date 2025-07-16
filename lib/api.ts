@@ -1,50 +1,18 @@
 import { ApiConfig, ApiResponse, ConfigInfo } from './types';
 
 // 根据mode和dataset确定API端点和参数
-export const getApiConfig = (mode: string, dataset: string, query: string): ApiConfig => {
-  if (dataset === 'cross_query') {
-    return {
-      endpoint: '/api/cross',
-      body: {
-        query,
-        datasets: ['price_index_statistics', 'machine_learning'],
-      },
-    };
-  }
-
-  if (mode === 'basic_rag') {
-    return {
-      endpoint: '/api/query',
-      body: {
-        query,
-        dataset,
-      },
-    };
-  }
-
-  if (mode === 'agentic_rag') {
-    return {
-      endpoint: '/api/agent',
-      body: {
-        query,
-        dataset,
-      },
-    };
-  }
-
-  // 默认情况
+export const getApiConfig = (query: string): ApiConfig => {
   return {
-    endpoint: '/api/query',
+    endpoint: '/api/intelligent-query',
     body: {
       query,
-      dataset,
     },
   };
 };
 
 // 调用实际API
-export const callRagApi = async (query: string, mode: string, dataset: string): Promise<ApiResponse> => {
-  const { endpoint, body } = getApiConfig(mode, dataset, query);
+export const callRagApi = async (query: string): Promise<ApiResponse> => {
+  const { endpoint, body } = getApiConfig(query);
 
   try {
     const response = await fetch(endpoint, {
@@ -146,7 +114,7 @@ export const getCurrentConfigInfo = (mode: string, dataset: string): ConfigInfo 
   }
 
   const modeDisplay = mode === 'basic_rag' ? 'Basic RAG' : 'Agentic RAG';
-  const endpointDisplay = mode === 'basic_rag' ? '/api/query' : '/api/agent';
+  const endpointDisplay = mode === 'basic_rag' ? '/api/intelligent-query' : '/api/agent';
 
   return {
     mode: modeDisplay,

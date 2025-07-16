@@ -26,17 +26,15 @@ export function HelpPanel() {
             </h3>
             <div className='space-y-2 text-sm text-gray-600'>
               <div className='p-3 bg-blue-50 rounded-lg'>
-                <p className='font-medium text-blue-800 mb-1'>Basic RAG</p>
-                <p>基础检索增强生成，适用于简单问答场景</p>
+                <p className='font-medium text-blue-800 mb-1'>强大的 Agentic RAG 系统</p>
+                <p>智能代理RAG，支持普通 RAG 检索、工具调用、多意图识别、多步骤推理、多数据集查询</p>
               </div>
-              <div className='p-3 bg-green-50 rounded-lg'>
-                <p className='font-medium text-green-800 mb-1'>Agentic RAG</p>
-                <p>智能代理RAG，支持工具调用和多步骤查询</p>
-              </div>
-              <div className='p-3 bg-purple-50 rounded-lg'>
-                <p className='font-medium text-purple-800 mb-1'>Cross Query</p>
-                <p>跨数据集查询，同时搜索多个数据源并对比结果</p>
-              </div>
+              {/* <div className='p-3 bg-purple-50 rounded-lg'>
+                <p className='font-medium text-purple-800 mb-1'>
+                  <span className='line-through'>Cross Query</span> <code className=' text-gray-500'>DEPRECATED</code>
+                </p>
+                <p className='line-through'>跨数据集查询，同时搜索多个数据源并对比结果</p>
+              </div> */}
             </div>
           </div>
 
@@ -65,7 +63,7 @@ export function HelpPanel() {
                     </a>{' '}
                     发布的价格指数统计数据
                   </p>
-                  <p>本数据集包含各类价格指数过去 13 个月的数据</p>
+                  <p>本数据集包含各类价格指数自 2025.4(含) 之前的 13 个月的数据</p>
                 </div>
               </div>
 
@@ -102,9 +100,9 @@ export function HelpPanel() {
                 <p className='text-gray-600'>&ldquo;解释一下卷积神经网络的工作原理&rdquo;</p>
               </div>
               <div className='p-3 bg-gray-50 rounded-lg'>
-                <p className='font-medium mb-1'>agentic查询：</p>
+                <p className='font-medium mb-1'>多意图/Agentic 查询：</p>
                 <p className='text-gray-600'>
-                  &ldquo;最近一个月PPI是多少？另外今天上海的天气如何？再帮我计算 123*456&rdquo;
+                  &ldquo;最近一个月工业生产者购进价格指数是多少？另外今天上海的天气如何？再帮我计算 123*456&rdquo;
                 </p>
               </div>
               <div className='p-3 bg-gray-50 rounded-lg'>
